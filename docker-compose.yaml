@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: ./docker/workspace/Dockerfile
+    container_name: react-ts-sample-workspace
+    tty: true
+    volumes:
+      - .:/work/react-ts-sample
+    working_dir: /work/react-ts-sample
+    ports:
+      - 3001:3000
