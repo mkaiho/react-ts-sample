@@ -9,6 +9,10 @@ services:
     tty: true
     volumes:
       - .:/work/react-ts-sample
+      - react-ts-sample_node_modules_volume:/work/react-ts-sample/node_modules
     working_dir: /work/react-ts-sample
     ports:
       - 3001:3000
+
+volumes:
+  react-ts-sample_node_modules_volume:
